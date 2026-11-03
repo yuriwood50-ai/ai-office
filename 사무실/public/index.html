@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>작가뀨 스튜디오 사무실</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="office.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>작가뀨 스튜디오 <span id="방이름"></span> <span id="모드표시" class="chip n-mode" hidden></span></h1>
+      <nav id="방탭"></nav>
+      <div class="actions">
+        <button id="새작업" type="button" class="primary" disabled>새 글 기획 시작</button>
+        <span>기획자가 기존 글을 살펴 새 주제와 다음 편 번호를 제안해요. 작가님은 승인하거나 반려해 주세요.</span>
+      </div>
+      <details class="optional-notes"><summary>기획자에게 부탁할 내용이 있나요? (선택)</summary>
+        <label for="기획요청" class="hint">비워 두면 기획자가 주제를 찾아요.</label>
+        <textarea id="기획요청" rows="2" maxlength="2000" placeholder="예: 이번에는 스마트폰 사진에 관한 글이면 좋겠어요"></textarea>
+      </details>
+      <div class="info">
+        <label>저장된 편 <select id="편선택"></select></label>
+        <span id="주제"></span>
+        <span id="단계" class="chip"></span>
+        <span id="갱신" class="small"></span>
+      </div>
+    </header>
+    <div id="알림" class="notice" hidden></div>
+    <p id="작업결과" class="task-result" role="status" hidden></p>
+    <p id="기획오류" class="form-error" role="alert" hidden></p>
+    <section id="기획패널" class="planner-panel" hidden aria-label="기획자의 제안">
+      <label for="기획선택">기획 기록</label><select id="기획선택"></select>
+      <div id="기획내용"></div>
+    </section>
+    <section id="작업상세" class="task-detail" hidden>
+      <strong>작가님 요청사항</strong><p id="요청내용"></p>
+    </section>
+    <section id="글쓰기패널" class="planner-panel" aria-label="글쓰기">
+      <h2>승인한 기획으로 글을 작성해요</h2><div id="글쓰기내용"></div>
+      <p id="글쓰기오류" class="form-error" role="alert" hidden></p>
+    </section>
+    <div id="무대틀"><div id="무대"></div></div>
+    <section id="공고패널" class="planner-panel notice-panel" aria-label="공고 정보센터" hidden></section>
+    <section id="대화창" aria-label="최근 상태 메시지"></section>
+  </div>
+  <script src="office.js"></script>
+  <script src="writer-ui.js"></script>
+  <script src="notice-ui.js"></script>
+</body>
+</html>
