@@ -1,3 +1,11 @@
+# AI Office
+**A personal, local tool where AI staff collect public notices and draft blog posts on screen, and I approve each result.**
+- Problem: When you hand a whole task to AI, you can't see what it did or control its usage.
+- How: Plain code fetches, compares, and dedupes. AI is used only to interpret the text.
+- Status: Notice center working; blog team (plan → write) connected.
+
+---
+
 # AI 사무실 (AI Office)
 
 **AI 직원들이 일하는 모습을 한 화면에서 보면서, 사람이 승인하고 결정하는 로컬 작업 사무실**이에요. 지금은 두 가지 일을 맡아요.
